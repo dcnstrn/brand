@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Fullscreen Animated Sticky Header</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="img/cyberpunkHr.jpeg" class="banner" />
+      <a href="#" class="logo">Brand.</a>
+      <div class="toggle"></div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h2>Creative Fullscreen Sticky Header</h2>
+      <p>
+        Our comprehensive guide to CSS flexbox layout. This complete guide
+        explains everything about flexbox, focusing on all the different
+        possible properties for the parent element (the flex container) and the
+        child elements (the flex items). It also includes history, demos,
+        patterns, and a browser support chart.
+      </p>
+    </section>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+      document.querySelector(".toggle").oncklick = function () {
+        this.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
